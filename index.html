@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Experimenta Eventos</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="css/lightbox.css" rel="stylesheet">
+	<link href="css/lightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-1.11.1.min.js"></script>
+
+	<script>
+	// menu fixo e responsivo //
+		var mql = window.matchMedia("screen and (max-width: 768px)")
+		mediaqueryresponse(mql) // call listener function explicitly at run time
+		mql.addListener(mediaqueryresponse) // attach listener function to listen in on state changes
+
+		function mediaqueryresponse(mql){
+		 if (mql.matches){ // if media query matches
+		  console.log("The condition " + mql.media + " has been met")
+		  $(function(){   
+				var nav = $('#menuHeader');
+				$(window).scroll(function () { 
+					if ($(this).scrollTop() > 400) { 
+						nav.addClass("menu-fixo"); 
+					} else { 
+						nav.removeClass("menu-fixo"); 
+					} 
+				});  
+			});
+		 }
+		 else{
+		  console.log("Condition not met yet")
+		  $(function(){   
+			var nav = $('#menuHeader');
+			$(window).scroll(function () { 
+				if ($(this).scrollTop() > 680) { 
+					nav.addClass("menu-fixo"); 
+				} else { 
+					nav.removeClass("menu-fixo"); 
+				} 
+			});  
+		   });
+		 }
+		}
+	</script>
+</head>
+<body>
+<div class="container-fluid" id="header">
+	<div class="row">
+	    <div class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
+	    	<img src="images/experimenta-eventos-logo.png">
+	    	<h3 id="header-text">Muito mais do que buffet, uma assessoria completa para o seu evento ser inesquecível.</h3>
+	    	<button type="button" class="btn main" href="#about">EXPERIMENTA</button>
+	    </div>
+	</div>
+</div>
+<div class="container-fluid">
+  <div class="row" id="menuHeader">
+    <div class="header-left">
+    	<a href="#">
+    		<img src="images/logo.png">
+    	</a>
+    </div>
+    <div class="header-right" id="main-menu-links">
+	    	<label for="open">
+				<span class="hidden-desktop"></span>
+			</label>
+			<input type="checkbox" name="" id="open">
+			<nav>
+		    	<a href="#about">SOBRE</a>
+		    	<a href="#service">SERVIÇOS</a>
+		    	<a href="#pattern">SEU EVENTO</a>
+		    	<a href="#pattern">CONTATO</a>
+	    	</nav>
+    </div>
+  </div>
+  <div class="row" id="about">
+    <div class="col-lg-5 col-lg-offset-1 col-md-offset-1 col-md-5 col-sm-6 col-xs-12">
+    	<img src="images/seu-evento-personalizado.jpg">
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" id="about-text">
+    	<h2>Experimenta o seu evento do jeito que você sonhou!</h2>
+    	<p>Do buffet à ambientação, recepção, bar, audiovisual, vallet, você pode contar com um serviço completo feito por pessoas que te conhecem pelo nome e estão dedicadas a tornar o seu evento inesquecível.</p>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="row" id="recipe">
+  	<div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-11 col-xs-12" id="recipe-text">
+  		<h2>Receita de Sucesso</h2>
+  		<p>Separe hospitalidade e excelência no serviço. Acrescente bastante comprometimento e uma grande quantidade de exclusividade. Misture um cardápio único com ingredientes especialmente selecionados. Junte a essa receita uma grande habilidade de surpreender e muita confiança naquilo que fazemos. Essa é a receita para o sucesso de seu evento. Experimenta!</p>
+  	</div>
+  	<div class="col-lg-7 col-lg-offset-1 col-md-8 col-sm-12 col-xs-12 video">
+  		<iframe src="https://player.vimeo.com/video/84224297" width="640" height="356" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  	</div>
+  </div>
+  <div class="row" id="service">
+  	<img src="images/serviços.png">
+  </div>
+  <div class="row" id="service-menu">
+  	<input id="tab1" type="radio" name="tabs" checked>
+  	<label for="tab1">BUFFET</label>
+
+  	<input id="tab2" type="radio" name="tabs">
+  	<label for="tab2">AMBIENTAÇÃO</label>
+
+	<input id="tab3" type="radio" name="tabs">
+  	<label for="tab3">RECEPÇÃO</label>
+
+  	<input id="tab4" type="radio" name="tabs">
+  	<label for="tab4">BAR</label>
+
+  	<input id="tab5" type="radio" name="tabs">
+  	<label for="tab5">AUDIOVISUAL</label>
+
+  	<input id="tab6" type="radio" name="tabs">
+  	<label for="tab6">VALLET</label>
+
+  <section id="content1">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/buffet.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Buffets personalizados, temáticos e especiais</h2>
+	    	<p>Do café da manhã ao jantar, nossa mesa está sempre recheada de bom gosto. Receitas saborosas, com aromas inconfundíveis e que saltam aos olhos proporcionam uma experiência inesquecível para seus sentidos.</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="content2">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/ambientacao.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Ambientação</h2>
+	    	<p>Como complemento do evento, criamos lounges que tornam o momento ainda mais agradável. Cuidamos de cada detalhe para que o evento seja uma experiência completa e inesquecível.</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="content3">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/recepcao.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Recepção</h2>
+	    	<p>Seu evento deve ser memorável do começo ao fim, começando pela recepção. Conte com hostess bilingues, modelos, todas cuidadosamente selecionadas para seu evento ainda mais especial.</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="content4">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/bar.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Bar</h2>
+	    	<p>Nada melhor que comer e beber bem! Especialmente preparados, nossos drinks superam as expectativas. Mais do que isso, fazem a diferença!</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="content5">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/audiovisual.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Audiovisual</h2>
+	    	<p>Como complemento para seu evento, oferecemos toda a estrutura audiovisual necessária.</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+
+  <section id="content6">
+    <div class="container">
+	  <div class="row" id="about">
+	    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+	    	<img src="images/vallet.jpg">
+	    </div>
+	    <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
+	    	<h2>Vallet</h2>
+	    	<p>Nos preocupamos com seu patrimônio como se ele fosse nosso e, por isso, contamos com uma equipe formada por profissionais altamente qualificados.</p>
+	    </div>
+	  </div>
+	</div>
+  </section>
+    </div>
+</div>
+<div class="clients">
+	<div class="container">
+	    <div class="row clients-title">
+	  		<img src="images/clientes-dizem.png">
+	    </div>
+	    <div class="row">
+	  	    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left-case">
+			  	<h2>“O Experimenta tornou meu evento inesquecível! E o melhor: não tive que me preocupar com nada, eles cuidaram de tudo.”</h2>
+			  	<p>Nome Completo</p>
+			  	<p>Empresa</p>
+		    </div>
+		    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+			  	<h3>“O Experimenta tornou meu evento inesquecível! E o melhor: não tive que me preocupar com nada, eles cuidaram de tudo.”</h3>
+			  	<p>Nome Completo</p>
+			  	<p>Empresa</p>
+			  	<h3>“O Experimenta tornou meu evento inesquecível! E o melhor: não tive que me preocupar com nada, eles cuidaram de tudo.”</h3>
+			  	<p>Nome Completo</p>
+			  	<p>Empresa</p>
+		    </div>
+	    </div>
+	    <div class="row other-clients" style="display:none">
+	    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	    		<img src="images/logo.png" class="client-logo">
+	    	</div>
+	    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	    		<img src="images/logo.png" class="client-logo">
+	    	</div>
+	    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	    		<img src="images/logo.png" class="client-logo">
+	    	</div>
+	    	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+	    		<img src="images/logo.png" class="client-logo">
+	    	</div>
+	    </div>
+    </div>
+</div>
+<div class="container-fluid">
+	<div class="row" id="gallery">
+	    <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	    	<a href="images/buffet-completo-eventos.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/buffet-completo-eventos.jpg" alt="Buffet completo para eventos." /></a>
+	    </figure>
+	    <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	    	<a href="images/buffet-de-eventos.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/buffet-de-eventos.jpg" alt="Buffet de eventos em São Paulo." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/buffet-especializado-festa.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/buffet-especializado-festa.jpg" alt="Buffet especializado para festa." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/buffet-para-eventos.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/buffet-para-eventos.jpg" alt="Buffet para Eventos." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/coffee-eventos-sp.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/coffee-eventos-sp.jpg" alt="Coffee para eventos." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/buffet-tematico.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/buffet-tematico.jpg" alt="Buffet temático." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/eventos-empresariais.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/eventos-empresariais.jpg" alt="Eventos empresariais." /></a>
+	    </figure>
+	  <figure class="col-md-3 col-sm-3 col-xs-3 ">
+	  		<a href="images/servico-festas.jpg" data-lightbox="galeria">
+	      	<img class="img" id="myImg" src="images/servico-festas.jpg" alt="Serviço para festas." /></a>
+	    </figure>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row" id="pattern"></div>
+</div>
+<div class="container">
+	<div class="row event-title">
+		<img src="images/seu-evento.png">
+	</div>
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		  	<p>O seu evento do jeito que você sonhou, sua cabeça livre de preocupações para que você continue sonhando.</p>
+			<p>Vamos te ajudar com todos os detalhes! É só preencher o formulário ao lado e entraremos em contato com você.</p>
+			<p>Se preferir, entre em contato por:</p>
+			<p>Tel: (11) 3564-8005</p>
+			<p>Tel / Nextel: (11) 7880-3801 Id 86*11792 </p>	
+			<p>contato@florianopoliseventos.com</p>	
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		 	<form>
+		 		<div class="form-group">
+				    <label class="sr-only" for="name">Nome:</label>
+				    <input type="text" class="form-control" placeholder="Nome" id="name">
+				</div>
+				<div class="form-group">
+				    <label class="sr-only" for="company">Empresa:</label>
+				    <input type="text" class="form-control" placeholder="Empresa" id="company">
+				</div>
+				<div class="form-group">
+				    <label class="sr-only" for="phone">Telefone:</label>
+				    <input type="tel" class="form-control" placeholder="Telefone" id="phone">
+				</div>
+		 		<div class="form-group">
+				    <label class="sr-only" for="email">Email:</label>
+				    <input type="email" class="form-control" placeholder="Email" id="email">
+				</div>
+				<div class="form-group">
+					<label for="services">Serviços:</label>
+					<div id="services">
+						<label class="checkbox-inline">
+					      <input type="checkbox">Buffet
+					    </label>
+					    <label class="checkbox-inline">
+					      <input type="checkbox">Ambientação
+					    </label>
+					    <label class="checkbox-inline">
+					      <input type="checkbox">Recepção
+					    </label>
+					    <label class="checkbox-inline">
+					      <input type="checkbox">Bar
+					    </label>
+					    <label class="checkbox-inline">
+					      <input type="checkbox">Audiovisual
+					    </label>
+					    <label class="checkbox-inline">
+					      <input type="checkbox">Vallet
+					    </label>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="sr-only" for="comments">Comentários:</label>
+				    <input type="text-field" class="form-control" placeholder="Comentários" id="comments">
+				</div>
+				<button type="submit" class="btn main">ENVIAR</button>
+		 	</form>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row map">
+	</div>
+	<div class="row footer">
+		<div class="col-lg-3 ol-lg-offset-0 col-md-offset-0 col-md-2 ol-sm-offset-1 col-sm-3 col-xs-12">
+			<img src="images/logo.png">
+		</div>
+		<div class="col-lg-6 ol-lg-offset-0 col-md-offset-0 col-md-7 col-sm-offset-1 col-sm-3 col-xs-12">
+			<a href="#about">BUFFET</a>
+		    <a href="#about">AMBIENTAÇÃO</a>
+		    <a href="#about">RECEPÇÃO</a>
+		    <a href="#about">BAR</a>
+		    <a href="#about">AUDIOVISUAL</a>
+		    <a href="#about">VALLET</a>
+		    <a href="https://www.facebook.com/Experimenta-Eventos-208252836248854/">
+		    	<img src="images/facebook.png" class="social-media">
+		    </a>
+		</div>
+		<div class="col-lg-3 col-lg-offset-0 col-md-offset-0 col-md-3 col-sm-offset-1 col-sm-3 col-xs-12">
+			<button type="button" class="btn main" href="#pattern">SEU EVENTO</button>
+		</div>
+	</div>
+</div>
+
+<!-- js galeria -->
+<script src="js/lightbox.js"></script>
+
+</body>
+</html>
